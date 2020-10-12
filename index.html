@@ -14,12 +14,13 @@
     <div class="dropdown-trigger">
       <button class="dropdown-btn">Erasure Style <i class="fas fa-angle-down"></i></button>
       <ul class='dropdown-menu'>
-        <li class='option' onclick="changeErasureOption('invisible')">Blackout</li>
-        <li class='option' >Invisible</li>
-        <li class='option' >Strikethrough</li>
+        <li class='option' onclick="changeErasureOption('blackout')">Blackout</li>
+        <li class='option' onclick="changeErasureOption('invisible')">Invisible</li>
+        <li class='option' onclick="changeErasureOption('line-through')">Line-through</li>
       </div>
-      <p id= "current-style">Current Style: </p>
     </div>
+
+  
 
    
 
@@ -34,6 +35,17 @@
     <button onclick="clearText()" type="button" >Clear text</button>
 
     
+    <p id="current-style"></p>
+    <p id="current-seclection-style"></p>
+
+
+    <div class="dropdown-trigger">
+        <button class="dropdown-btn">Selection Style <i class="fas fa-angle-down"></i></button>
+        <ul class='dropdown-menu'>
+          <li class='option' onclick="changeSelectionOption('character')">Character</li>
+          <li class='option' onclick="changeSelectionOption('word')">Word</li>
+      </div>
+    </div>
 
 
     <script src="./dist/main.js"></script>
