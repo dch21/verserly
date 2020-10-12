@@ -1,0 +1,13 @@
+span.line-through {
+  text-decoration: line-through;
+}
+
+span.blackout {
+  background-color: black;
+}
+
+span.invisible {
+  color: white;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc3JjL3N0eWxlcy9pbmRleC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0k7QUFDSjs7QUFFQTtFQUNJO0FBQ0o7O0FBRUE7RUFDRztBQUNILEMiLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJzcGFuLmxpbmUtdGhyb3VnaCB7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBsaW5lLXRocm91Z2g7XG59XG5cbnNwYW4uYmxhY2tvdXQge1xuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xufVxuXG5zcGFuLmludmlzaWJsZSB7XG4gICBjb2xvcjogd2hpdGVcbn0iXSwic291cmNlUm9vdCI6IiJ9*/
