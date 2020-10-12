@@ -20,12 +20,19 @@
       </div>
     </div>
 
+    <label>Background Color
+      <input type="color" id="colorPicker"/>
+    </label>
   
 
    
 
 
-    <div id="targetText"></div>
+    <div>
+      <div id="targetText">
+
+      </div>
+    </div>
 
     <div id="box">
       <textarea id="submitedText" autocapitalize="off" placeholder="Enter text"></textarea>
@@ -33,6 +40,7 @@
     </div>
 
     <button onclick="clearText()" type="button" >Clear text</button>
+    <button onclick="generateText()" type="button" >Generate text</button>
 
     
     <p id="current-style"></p>

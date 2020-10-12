@@ -99,13 +99,16 @@ span.blackout {
 }
 
 span.invisible {
-   color: white
+   opacity: 0
 }
 
 #targetText {
     border: 1px gray solid;
     height: 500px;
+    width: 600px;
     border-radius: 5px;
     white-space: pre-wrap;
     cursor: pointer;
+    padding: 30px;
 }
+

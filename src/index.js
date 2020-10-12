@@ -1,4 +1,11 @@
 import "./styles/index.scss";
+// import { changeColor } from "./scripts/filters";
+
+const colorPicker = document.getElementById("colorPicker");
+
+colorPicker.addEventListener("change", function() {
+  document.getElementById("targetText").style.backgroundColor = this.value;
+});
 
 let erasureOption = "blackout";
 window.erasureOption = erasureOption;
@@ -64,6 +71,7 @@ window.submitText = function submitText() {
 
     const span = document.createElement("span");
     span.className = "visible";
+    span.setAttribute("contenteditable", true);
     span.innerHTML = letter;
     span.addEventListener("click", function() {
       if (window.erasureSelection === "character") {
@@ -102,6 +110,29 @@ function getWord(ele) {
   
   return letters
 }
+
+
+window.generateText = function generateText() {
+const submittedText = "I heard a Fly buzz - when I died -\nThe Stillness in the Room\nWas like the Stillness in the Air -\nBetween the Heaves of Storm\n"
+
+submittedText.split("").forEach((letter) => {
+  const span = document.createElement("span");
+  span.className = "visible";
+  span.setAttribute("contenteditable", true);
+  span.innerHTML = letter;
+  span.addEventListener("click", function () {
+    if (window.erasureSelection === "character") {
+      this.classList.toggle(`${window.erasureOption}`);
+    } else {
+      getWord(this).forEach((letterElement) => {
+        letterElement.classList.toggle(`${window.erasureOption}`);
+      });
+    }
+  });
+
+  const paragraph = document.getElementById("targetText");
+  paragraph.append(span);
+});};
 
 window.clearText = function clearText() {
   const submittedText = document.getElementById("targetText").innerHTML = "";
