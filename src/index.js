@@ -1,6 +1,18 @@
 import "./styles/index.scss";
 
-// console.log("Webpack is working!");
+let erasureOption = "blackout";
+window.erasureOption = erasureOption;
+
+document.getElementById("current-style").innerHTML = 
+`Current Style: ${erasureOption.charAt(0).toUpperCase() + erasureOption.slice(1)
+}`;
+
+window.changeErasureOption = function changeErasureOption(option) {
+  erasureOption = option
+}
+
+
+
 
 window.submitText = function submitText() {
   const submittedText = document.getElementById("submitedText").value;
@@ -10,12 +22,15 @@ window.submitText = function submitText() {
     const span = document.createElement("span");
     span.className = "visible";
     span.innerHTML = letter;
+    span.addEventListener("click", function() {
+      this.classList.toggle("blackout");
+    });
+
     const paragraph = document.getElementById("targetText");
-    console.log(paragraph)
     paragraph.append(span);
   });
-
-//   document.getElementById("outputtext").innerHTML = span;
 };
 
-
+window.clearText = function clearText() {
+  const submittedText = document.getElementById("targetText").innerHTML = "";
+};

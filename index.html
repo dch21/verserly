@@ -4,17 +4,35 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8304861193.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="./dist/main.css" />
-    <title>Document</title>
+    <title>Mediocre English Major</title>
   </head>
 
   <body>
     
+    <div class="dropdown-trigger">
+      <button class="dropdown-btn">Erasure Style <i class="fas fa-angle-down"></i></button>
+      <ul class='dropdown-menu'>
+        <li class='option' onclick="changeErasureOption('invisible')">Blackout</li>
+        <li class='option' >Invisible</li>
+        <li class='option' >Strikethrough</li>
+      </div>
+      <p id= "current-style">Current Style: </p>
+    </div>
+
+   
+
+
     <div id="targetText"></div>
+
     <div id="box">
       <textarea id="submitedText" autocapitalize="off" placeholder="Enter text"></textarea>
       <button onclick="submitText()" type="button" id="submitbutton">Submit text</button>
     </div>
+
+    <button onclick="clearText()" type="button" >Clear text</button>
+
     
 
 
