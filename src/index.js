@@ -1,5 +1,8 @@
 import "./styles/index.scss";
-// import { changeColor } from "./scripts/filters";
+import { toggleEditable } from "./scripts/filters";
+
+window.editable = false
+window.toggleEditable = toggleEditable
 
 const colorPicker = document.getElementById("colorPicker");
 
@@ -71,7 +74,7 @@ window.submitText = function submitText() {
 
     const span = document.createElement("span");
     span.className = "visible";
-    span.setAttribute("contenteditable", true);
+    span.setAttribute("contenteditable", false);
     span.innerHTML = letter;
     span.addEventListener("click", function() {
       if (window.erasureSelection === "character") {
@@ -95,7 +98,7 @@ function getWord(ele) {
   while (prev !== null && prev.innerHTML !== " ") {
     letters.push(prev);
     prev = prev.previousElementSibling;
-    if (prev.innerHTML === " ") {
+    if (prev === null || prev.innerHTML === " " || prev.innerHTML === ".") {
       break;
     }
   }
@@ -103,7 +106,7 @@ function getWord(ele) {
   while (next !==  null && next.innerHTML !== " ") {
       letters.push(next)
       next = next.nextElementSibling;
-      if (next.innerHTML === " ") {
+      if (next === null || next.innerHTML === " " || next.innerHTML === ".") {
         break;
       }
   }
@@ -118,7 +121,7 @@ const submittedText = "I heard a Fly buzz - when I died -\nThe Stillness in the 
 submittedText.split("").forEach((letter) => {
   const span = document.createElement("span");
   span.className = "visible";
-  span.setAttribute("contenteditable", true);
+  span.setAttribute("contenteditable", false);
   span.setAttribute("z-index", 3);
   span.innerHTML = letter;
   span.addEventListener("click", function () {
@@ -177,3 +180,36 @@ function readURL() {
 //   alert(this.src); // blob url
 //   // update width and height ...
 // }
+
+const inspiration = document.getElementById("inspiration")
+const url = "http://api.datamuse.com/words?rel_jjb=ocean"
+
+// window.test = fetch(url)
+//   .then( (resp) => console.log(resp.json()))
+
+window.findRhymes = () => {
+  const x = document.getElementById("inspiration-search").value;
+  fetch(url)
+    .then( resp => resp.json())
+    .then((data) => console.log(pareseDisplayData(data)));
+
+};
+
+function pareseDisplayData(data) {
+  shuffleArray(data)
+  let newData = []
+  data.slice(0,10).forEach( (wordObject)=> {
+    newData.push(wordObject.word)
+  })
+  return newData
+}
+
+//https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}

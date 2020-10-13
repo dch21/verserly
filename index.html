@@ -17,14 +17,17 @@
       <input type="color" id="colorPicker"/>
     </label>
   
+    <form id="inspiration">
+      <input type="input" id="inspiration-search">
+      <button type="button" onclick="findRhymes()">Find Rhymes</button>
+    </form>
 
-   
+    <p id="inspiration-results"></p>
 
 
     <div class="user-container">
-      <div spellcheck="false" id="targetText">
-      <!-- <div id="user-picture" alt="user-picture"> -->
-      </div>
+      <div spellcheck="false" id="targetText"></div>
+      <div id="user-picture" alt="user-picture"></div>
     </div>
 
     <div id="box">
@@ -58,6 +61,8 @@
             <li class='option' onclick="changeErasureOption('line-through')">Line-through</li>
           </ul>
       </div>
+
+      <button onclick="toggleEditable()" type="button">Toggle Editable</button>
     </div>
 
     <script src="./dist/main.js"></script>

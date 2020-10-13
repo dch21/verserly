@@ -102,10 +102,16 @@ span.invisible {
    opacity: 0
 }
 
+.toolbox {
+    display: flex;
+}
 
+.user-container {
+    position: relative;
+}
 
 #targetText {
-    border: 1px gray solid;
+    border: 1px rgb(193, 186, 186) solid;
     height: 500px;
     width: 600px;
     border-radius: 5px;
@@ -113,13 +119,9 @@ span.invisible {
     cursor: pointer;
     padding: 30px;
     height: 500px; width: 600px;
-    opacity: 0.5;
        background-image:url('');
     background-size:cover;
     background-position: center;
-
+    position: relative;
 }
 
-.toolbox {
-    display: flex;
-}
