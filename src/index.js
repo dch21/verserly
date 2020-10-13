@@ -138,8 +138,12 @@ submittedText.split("").forEach((letter) => {
   paragraph.append(span);
 });};
 
-window.clearText = function clearText() {
-  const submittedText = document.getElementById("targetText").innerHTML = "";
+window.clearText = (area) => {
+  document.getElementById(area).innerHTML = "";
+
+  if (area === "inspiration-results") {
+    document.getElementById("inspiration-results").style.display = "none"
+  }
 };
 
 
@@ -197,13 +201,14 @@ window.findWord = (filter) => {
 };
 
 function pareseDisplayData(data) {
-  shuffleArray(data)
-  data.slice(0,10).forEach( (wordObject)=> {
+  // shuffleArray(data) turn it off
+  const resultsBox = document.getElementById("inspiration-results");
+  data.slice(0,20).forEach( (wordObject)=> {
     const span = document.createElement("span");
     span.innerHTML = wordObject.word + " ";
-    const resultsBox = document.getElementById("inspiration-results");
     resultsBox.append(span);
   })
+  resultsBox.style.display = "block"
 }
 
 //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array

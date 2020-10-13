@@ -18,7 +18,7 @@
       <div id="box">
         <textarea id="submitedText" autocapitalize="off" placeholder="Enter your text here."></textarea>
         <button onclick="submitText()" type="button" id="submitbutton">Submit text</button>
-        <button onclick="clearText()" type="button">Clear text</button>
+        <button onclick="clearText('targetText')" type="button">Clear text</button>
       </div>
 
       <button class="editable" onclick="toggleEditable()" type="button">Toggle Editable</button>
@@ -52,7 +52,7 @@
 
       <h5 class="label-description">Word Generator</h5>
       <div>
-        <textarea rows="3" cols="23" type="input" id="inspiration-search" placeholder="Enter word first, then click below to choose parameters"></textarea>
+        <textarea rows="3" cols="20" type="input" id="inspiration-search" placeholder="Enter word first, then click below to choose parameters"></textarea>
 
         <div class="dropdown-trigger">
           <button class="dropdown-btn">Parameters <i class="fas fa-angle-down"></i></button>
@@ -70,7 +70,11 @@
           </ul>
         </div>
 
-        <p id="inspiration-results"></p>
+        <div>
+            <p id="inspiration-results"></p>
+        </div>
+          <button onclick="clearText('inspiration-results')" type="button">Clear text</button>
+
 
       </div>
 
