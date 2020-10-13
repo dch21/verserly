@@ -13,17 +13,19 @@
     
   
 
-    <label>Background Color
-      <input type="color" id="colorPicker"/>
-    </label>
-  
+    
     <form id="inspiration">
       <input type="input" id="inspiration-search">
-      <button type="button" onclick="findRhymes()">Find Rhymes</button>
     </form>
+
+
 
     <div id="inspiration-results"></div>
 
+
+    <label>Background Color
+      <input type="color" id="colorPicker" />
+    </label>
 
     <div class="user-container">
       <div spellcheck="false" id="targetText"></div>
@@ -61,6 +63,22 @@
             <li class='option' onclick="changeErasureOption('line-through')">Line-through</li>
           </ul>
       </div>
+
+          <div class="dropdown-trigger">
+            <button class="dropdown-btn">Word Finder Filters <i class="fas fa-angle-down"></i></button>
+            <ul class='dropdown-menu'>
+              <li onclick='findWord("rel_rhy")'>Rhymes</li>
+              <li onclick='findWord("rel_nry")'>Slant Rhymes</li>
+              <li onclick='findWord("rel_syn")'>Synonyms</li>
+              <li onclick='findWord("rel_ant")'>Antonyms</li>
+              <li onclick='findWord("rel_hom")'>Homophones</li>
+              <li onclick='findWord("rel_trg")'>Related Words</li>
+              <li onclick='findWord("ml")'>Related Meaning</li>
+              <li onclick='findWord("rel_jja")'>Adjective -> Noun</li>
+              <li onclick='findWord("rel_jjb")'>Noun -> Adjective</li>
+              <li onclick='findWord("rel_com")'>Comprises</li>
+            </ul>
+          </div>
 
       <button onclick="toggleEditable()" type="button">Toggle Editable</button>
     </div>

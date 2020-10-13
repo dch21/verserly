@@ -185,11 +185,11 @@ function readURL() {
 let url = "http://api.datamuse.com/words?"
 
 
-window.findRhymes = () => {
+window.findWord = (filter) => {
   const searchTerms = document.getElementById("inspiration-search").value;
   let urlCopy = new URL(url)
   let params = new URLSearchParams(urlCopy.search);
-  params.append("sl", searchTerms);
+  params.append(filter, searchTerms);
   fetch(url + params.toString()  )
     .then( resp => resp.json())
     .then((data) => pareseDisplayData(data));
