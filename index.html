@@ -11,14 +11,7 @@
 
   <body>
     
-    <div class="dropdown-trigger">
-      <button class="dropdown-btn">Erasure Style <i class="fas fa-angle-down"></i></button>
-      <ul class='dropdown-menu'>
-        <li class='option' onclick="changeErasureOption('blackout')">Blackout</li>
-        <li class='option' onclick="changeErasureOption('invisible')">Invisible</li>
-        <li class='option' onclick="changeErasureOption('line-through')">Line-through</li>
-      </div>
-    </div>
+  
 
     <label>Background Color
       <input type="color" id="colorPicker"/>
@@ -28,9 +21,9 @@
    
 
 
-    <div>
-      <div id="targetText">
-
+    <div class="user-container">
+      <div spellcheck="false" id="targetText">
+      <!-- <div id="user-picture" alt="user-picture"> -->
       </div>
     </div>
 
@@ -46,15 +39,26 @@
     <p id="current-style"></p>
     <p id="current-seclection-style"></p>
 
+    <div class="toolbox">
+      <div class="dropdown-trigger">
+          <button class="dropdown-btn">Selection Style <i class="fas fa-angle-down"></i></button>
+          <ul class='dropdown-menu'>
+            <li class='option' onclick="changeSelectionOption('character')">Character</li>
+            <li class='option' onclick="changeSelectionOption('word')">Word</li>
+          </ul>
+      </div>
 
-    <div class="dropdown-trigger">
-        <button class="dropdown-btn">Selection Style <i class="fas fa-angle-down"></i></button>
-        <ul class='dropdown-menu'>
-          <li class='option' onclick="changeSelectionOption('character')">Character</li>
-          <li class='option' onclick="changeSelectionOption('word')">Word</li>
+      <input type='file' id='getval' />
+
+      <div class="dropdown-trigger">
+          <button class="dropdown-btn">Erasure Style <i class="fas fa-angle-down"></i></button>
+          <ul class='dropdown-menu'>
+            <li class='option' onclick="changeErasureOption('blackout')">Blackout</li>
+            <li class='option' onclick="changeErasureOption('invisible')">Invisible</li>
+            <li class='option' onclick="changeErasureOption('line-through')">Line-through</li>
+          </ul>
       </div>
     </div>
-
 
     <script src="./dist/main.js"></script>
    

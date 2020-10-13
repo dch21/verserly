@@ -119,6 +119,7 @@ submittedText.split("").forEach((letter) => {
   const span = document.createElement("span");
   span.className = "visible";
   span.setAttribute("contenteditable", true);
+  span.setAttribute("z-index", 3);
   span.innerHTML = letter;
   span.addEventListener("click", function () {
     if (window.erasureSelection === "character") {
@@ -137,3 +138,42 @@ submittedText.split("").forEach((letter) => {
 window.clearText = function clearText() {
   const submittedText = document.getElementById("targetText").innerHTML = "";
 };
+
+
+document.getElementById("getval").addEventListener("change", readURL, true);
+function readURL() {
+  var file = document.getElementById("getval").files[0];
+  var reader = new FileReader();
+  reader.onloadend = function () {
+    document.getElementById("targetText").style.backgroundImage =
+      "url(" + reader.result + ")";
+  };
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+  }
+}
+
+// window.addEventListener("load", function () {
+//   document
+//     .querySelector('input[type="file"]')
+//     .addEventListener("change", function () {
+//       if (this.files && this.files[0]) {
+//         var img = document.querySelector("img"); // $('img')[0]
+//         img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+        // img.setAttribute("display", "absolute");
+           
+        // img.onload = imageIsLoaded;
+        
+//       }
+//     });
+
+    
+// });
+
+// function imageIsLoaded() { 
+//   const pic = document.getElementById("user-picture");
+//   pic.setAttribute("display", "absolute");
+//   alert(this.src); // blob url
+//   // update width and height ...
+// }

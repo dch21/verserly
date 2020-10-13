@@ -102,6 +102,8 @@ span.invisible {
    opacity: 0
 }
 
+
+
 #targetText {
     border: 1px gray solid;
     height: 500px;
@@ -110,5 +112,14 @@ span.invisible {
     white-space: pre-wrap;
     cursor: pointer;
     padding: 30px;
+    height: 500px; width: 600px;
+    opacity: 0.5;
+       background-image:url('');
+    background-size:cover;
+    background-position: center;
+
 }
 
+.toolbox {
+    display: flex;
+}
