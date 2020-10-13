@@ -4,7 +4,7 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h2, h3, h4, h5, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -48,46 +48,85 @@ table {
 }
 
 
+body {
+    display: flex;
+    font-family: Helvetica, sans-serif;;
+}
 
+.toolbox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 30px;
+}
 
+h1 {
+    font-weight: 800;
+}
 
+#box textarea{
+    display: flex;
+    flex-direction: column;
+    width: 153px;
+    margin-bottom: 5px;
+}
 
+.editable {
+    margin-top: 20px;
+    width: fit-content;
+}
 
+.label-description {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
 
 .dropdown-btn {
     cursor: pointer;
 }
 
 .dropdown-trigger {
-    width: 250px;
+    width: 120px;
     position: relative;
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    min-width: 250px;
-    left: 30px;
+    min-width: 120px;
+    left: 20px;
 }
 
 .dropdown-trigger:hover > .dropdown-menu {
     display: block;
+    border: #FAF7EB solid 2px;
 }
 
 .dropdown-menu > li:hover {
     display: block;
-    background-color: grey;
+    background-color: rgb(98, 102, 135);
+    color: white;
 }
 
 ul.dropdown-menu {
   list-style: none;
   padding: 0px;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 0px;
+  z-index: 3;
+  background-color: rgb(148, 152, 191);
 }
 
 li {
-  padding: 5px;
+  padding: 2px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#inspiration-results {
+    width: 153px;
 }
 
 span.line-through {
@@ -102,8 +141,9 @@ span.invisible {
    opacity: 0
 }
 
-.toolbox {
-    display: flex;
+.canvas {
+    margin-top: 50px;
+    margin-left: 80px;
 }
 
 .user-container {
@@ -123,5 +163,10 @@ span.invisible {
     background-size:cover;
     background-position: center;
     position: relative;
+    background-color: #FAF7EB;
+    font-family: Helvetica;
+
+
+
 }
 

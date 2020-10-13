@@ -6,81 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8304861193.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="./dist/main.css" />
-    <title>Mediocre English Major</title>
+    <title>Poetry Editor</title>
   </head>
 
   <body>
     
-  
-
-    
-    <form id="inspiration">
-      <input type="input" id="inspiration-search">
-    </form>
-
-
-
-    <div id="inspiration-results"></div>
-
-
-    <label>Background Color
-      <input type="color" id="colorPicker" />
-    </label>
-
-    <div class="user-container">
-      <div spellcheck="false" id="targetText"></div>
-      <div id="user-picture" alt="user-picture"></div>
-    </div>
-
-    <div id="box">
-      <textarea id="submitedText" autocapitalize="off" placeholder="Enter text"></textarea>
-      <button onclick="submitText()" type="button" id="submitbutton">Submit text</button>
-    </div>
-
-    <button onclick="clearText()" type="button" >Clear text</button>
-    <button onclick="generateText()" type="button" >Generate text</button>
-
-    
-    <p id="current-style"></p>
-    <p id="current-seclection-style"></p>
 
     <div class="toolbox">
-      <div class="dropdown-trigger">
-          <button class="dropdown-btn">Selection Style <i class="fas fa-angle-down"></i></button>
-          <ul class='dropdown-menu'>
-            <li class='option' onclick="changeSelectionOption('character')">Character</li>
-            <li class='option' onclick="changeSelectionOption('word')">Word</li>
-          </ul>
+      <h1>Poetry Editor</h1>
+
+      <div id="box">
+        <textarea id="submitedText" autocapitalize="off" placeholder="Enter your text here."></textarea>
+        <button onclick="submitText()" type="button" id="submitbutton">Submit text</button>
+        <button onclick="clearText()" type="button">Clear text</button>
       </div>
 
+      <button class="editable" onclick="toggleEditable()" type="button">Toggle Editable</button>
+
+      <div class="background-color">
+        <h5 class="label-description">Background Color</h5>
+        <input type="color" id="colorPicker" value="#FAF7EB"/>
+      </div>
+
+      <h5 class="label-description">Background Picture</h5>
       <input type='file' id='getval' />
 
+      <h5 id="current-style" class="label-description"></h5>
       <div class="dropdown-trigger">
-          <button class="dropdown-btn">Erasure Style <i class="fas fa-angle-down"></i></button>
-          <ul class='dropdown-menu'>
-            <li class='option' onclick="changeErasureOption('blackout')">Blackout</li>
-            <li class='option' onclick="changeErasureOption('invisible')">Invisible</li>
-            <li class='option' onclick="changeErasureOption('line-through')">Line-through</li>
-          </ul>
+        <button class="dropdown-btn">Erasure Style <i class="fas fa-angle-down"></i></button>
+        <ul class='dropdown-menu'>
+          <li class='option' onclick="changeErasureOption('blackout')">Blackout</li>
+          <li class='option' onclick="changeErasureOption('invisible')">Invisible</li>
+          <li class='option' onclick="changeErasureOption('line-through')">Line-through</li>
+        </ul>
       </div>
 
-          <div class="dropdown-trigger">
-            <button class="dropdown-btn">Word Finder Filters <i class="fas fa-angle-down"></i></button>
-            <ul class='dropdown-menu'>
-              <li onclick='findWord("rel_rhy")'>Rhymes</li>
-              <li onclick='findWord("rel_nry")'>Slant Rhymes</li>
-              <li onclick='findWord("rel_syn")'>Synonyms</li>
-              <li onclick='findWord("rel_ant")'>Antonyms</li>
-              <li onclick='findWord("rel_hom")'>Homophones</li>
-              <li onclick='findWord("rel_trg")'>Related Words</li>
-              <li onclick='findWord("ml")'>Related Meaning</li>
-              <li onclick='findWord("rel_jja")'>Adjective -> Noun</li>
-              <li onclick='findWord("rel_jjb")'>Noun -> Adjective</li>
-              <li onclick='findWord("rel_com")'>Comprises</li>
-            </ul>
-          </div>
+      <h5 id="current-selection-style" class="label-description"></h5>
+      <div class="dropdown-trigger">
+        <button class="dropdown-btn">Selection Style <i class="fas fa-angle-down"></i></button>
+        <ul class='dropdown-menu'>
+          <li class='option' onclick="changeSelectionOption('character')">Character</li>
+          <li class='option' onclick="changeSelectionOption('word')">Word</li>
+        </ul>
+      </div>
 
-      <button onclick="toggleEditable()" type="button">Toggle Editable</button>
+      <h5 class="label-description">Word Generator</h5>
+      <div>
+        <textarea rows="3" cols="23" type="input" id="inspiration-search" placeholder="Enter word first, then click below to choose parameters"></textarea>
+
+        <div class="dropdown-trigger">
+          <button class="dropdown-btn">Parameters <i class="fas fa-angle-down"></i></button>
+          <ul class='dropdown-menu'>
+            <li onclick='findWord("rel_rhy")'>Rhymes</li>
+            <li onclick='findWord("rel_nry")'>Slant Rhymes</li>
+            <li onclick='findWord("rel_syn")'>Synonyms</li>
+            <li onclick='findWord("rel_ant")'>Antonyms</li>
+            <li onclick='findWord("rel_hom")'>Homophones</li>
+            <li onclick='findWord("rel_trg")'>Related Words</li>
+            <li onclick='findWord("ml")'>Related Meaning</li>
+            <li onclick='findWord("rel_jja")'>Adjective -> Noun</li>
+            <li onclick='findWord("rel_jjb")'>Noun -> Adjective</li>
+            <li onclick='findWord("rel_com")'>Comprises</li>
+          </ul>
+        </div>
+
+        <p id="inspiration-results"></p>
+
+      </div>
+
+
+
+
+   
+      
+      
+      
+      
+      
+    
+
+    </div>
+
+    <div class="canvas">
+    
+      <div class="user-container">
+        <div spellcheck="false" id="targetText"></div>
+        <div id="user-picture" alt="user-picture"></div>
+      </div>
+    
+    
+    
+      <button onclick="generateText()" type="button">Generate text</button>
+    
     </div>
 
     <script src="./dist/main.js"></script>

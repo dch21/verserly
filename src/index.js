@@ -16,13 +16,13 @@ window.erasureOption = erasureOption;
 let erasureSelection = "character";
 window.erasureSelection = erasureSelection;
 
-document.getElementById("current-style").innerHTML = `Current Erasure Style: ${
+document.getElementById("current-style").innerHTML = `Erasure Style: ${
   window.erasureOption.charAt(0).toUpperCase() + window.erasureOption.slice(1)
 }`;
 
 document.getElementById(
-  "current-seclection-style"
-).innerHTML = `Current Selection Style: ${
+  "current-selection-style"
+).innerHTML = `Selection Style: ${
   window.erasureSelection.charAt(0).toUpperCase() +
   window.erasureSelection.slice(1)
 }`;
@@ -40,8 +40,8 @@ window.changeSelectionOption = function changeSelectionOption(option) {
   window.erasureSelection = option;
 
   document.getElementById(
-    "current-seclection-style"
-  ).innerHTML = `Current Selection Style: ${
+    "current-selection-style"
+  ).innerHTML = `Selection Style: ${
     window.erasureSelection.charAt(0).toUpperCase() +
     window.erasureSelection.slice(1)
   }`;
