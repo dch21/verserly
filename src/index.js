@@ -181,27 +181,29 @@ function readURL() {
 //   // update width and height ...
 // }
 
-const inspiration = document.getElementById("inspiration")
-const url = "http://api.datamuse.com/words?rel_jjb=ocean"
+// const inspiration = document.getElementById("inspiration")
+let url = "http://api.datamuse.com/words?"
 
-// window.test = fetch(url)
-//   .then( (resp) => console.log(resp.json()))
 
 window.findRhymes = () => {
-  const x = document.getElementById("inspiration-search").value;
-  fetch(url)
+  const searchTerms = document.getElementById("inspiration-search").value;
+  let urlCopy = new URL(url)
+  let params = new URLSearchParams(urlCopy.search);
+  params.append("sl", searchTerms);
+  fetch(url + params.toString()  )
     .then( resp => resp.json())
-    .then((data) => console.log(pareseDisplayData(data)));
+    .then((data) => pareseDisplayData(data));
 
 };
 
 function pareseDisplayData(data) {
   shuffleArray(data)
-  let newData = []
   data.slice(0,10).forEach( (wordObject)=> {
-    newData.push(wordObject.word)
+    const span = document.createElement("span");
+    span.innerHTML = wordObject.word + " ";
+    const resultsBox = document.getElementById("inspiration-results");
+    resultsBox.append(span);
   })
-  return newData
 }
 
 //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
