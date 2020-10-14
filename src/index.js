@@ -6,8 +6,13 @@ window.toggleEditable = toggleEditable
 window.changeFontOption = changeFontOption;
 
 const colorPicker = document.getElementById("colorPicker");
-colorPicker.addEventListener("change", function() {
-  document.getElementById("targetText").style.backgroundColor = this.value;
+colorPicker.addEventListener("change", () => {
+  document.getElementById("targetText").style.backgroundColor = colorPicker.value;
+});
+
+const fontSize = document.getElementById("fontSize");
+fontSize.addEventListener("change", () => {
+  document.getElementById("targetText").style.fontSize = fontSize.value + "px"
 });
 
 let erasureOption = "blackout";
