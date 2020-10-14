@@ -162,7 +162,7 @@ span.invisible {
 
 .canvas {
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .user-container {
@@ -186,8 +186,41 @@ span.invisible {
     position: relative;
     background-color: #FAF7EB;
     font-family: Helvetica;
-
-
-
 }
 
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    width: 300px;
+}
+
+.bio-info {
+    display: flex;
+    margin-top: 23px;
+    font-size: 28px;
+    margin-left: auto;
+}
+
+.instructions {
+    line-height: 1.45;
+}
+
+.instructions-header {
+    color: rgb(196, 30, 30);
+    margin-bottom: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+.instructions-text {
+    display: none;
+    position: absolute;
+}
+
+.instructions-header:hover > .instructions-text {
+    display: block;
+    border: #FAF7EB solid 2px;
+    color :black;
+    border-radius: 3px;
+}
