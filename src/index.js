@@ -6,7 +6,6 @@ window.toggleEditable = toggleEditable
 window.changeFontOption = changeFontOption;
 
 const colorPicker = document.getElementById("colorPicker");
-
 colorPicker.addEventListener("change", function() {
   document.getElementById("targetText").style.backgroundColor = this.value;
 });
@@ -17,27 +16,26 @@ window.erasureOption = erasureOption;
 let erasureSelection = "character";
 window.erasureSelection = erasureSelection;
 
-document.getElementById("current-style").innerHTML = `Erasure Style: ${
-  window.erasureOption.charAt(0).toUpperCase() + window.erasureOption.slice(1)
-}`;
+// document.getElementById("current-style").innerHTML = `Erasure Style: ${
+//   window.erasureOption.charAt(0).toUpperCase() + window.erasureOption.slice(1)
+// }`;
 
-document.getElementById(
-  "current-selection-style"
-).innerHTML = `Selection Style: ${
-  window.erasureSelection.charAt(0).toUpperCase() +
-  window.erasureSelection.slice(1)
-}`;
+// document.getElementById(
+//   "current-selection-style"
+// ).innerHTML = `Selection Style: ${
+//   window.erasureSelection.charAt(0).toUpperCase() +
+//   window.erasureSelection.slice(1)
+// }`;
 
-window.changeErasureOption = function changeErasureOption(option) {
+window.changeErasureOption = (option) => {
   window.erasureOption = option
 
   document.getElementById("current-style").innerHTML = `Current Style: ${
     window.erasureOption.charAt(0).toUpperCase() + window.erasureOption.slice(1)
   }`;
-
 }
 
-window.changeSelectionOption = function changeSelectionOption(option) {
+window.changeSelectionOption = (option) => {
   window.erasureSelection = option;
 
   document.getElementById(
@@ -49,26 +47,7 @@ window.changeSelectionOption = function changeSelectionOption(option) {
 };
 
 
-
-
-// window.submitText = function submitText() {
-//   const submittedText = document.getElementById("submitedText").value;
-
-//   submittedText.split("").forEach((letter) => {
-
-//     const span = document.createElement("span");
-//     span.className = "visible";
-//     span.innerHTML = letter;
-//     span.addEventListener("click", function() {
-//       this.classList.toggle(`${window.erasureOption}`);
-//     });
-
-//     const paragraph = document.getElementById("targetText");
-//     paragraph.append(span);
-//   });
-// };
-
-window.submitText = function submitText() {
+window.submitText = () => {
   const submittedText = document.getElementById("submitedText").value;
 
   submittedText.split("").forEach((letter) => {
@@ -116,7 +95,7 @@ function getWord(ele) {
 }
 
 
-window.generateText = function generateText() {
+window.generateText = () => {
 const submittedText = "I heard a Fly buzz - when I died -\nThe Stillness in the Room\nWas like the Stillness in the Air -\nBetween the Heaves of Storm\n"
 
 submittedText.split("").forEach((letter) => {
@@ -148,48 +127,16 @@ window.clearText = (area) => {
   }
 };
 
-
-document.getElementById("getval").addEventListener("change", readURL, true);
-function readURL() {
-  var file = document.getElementById("getval").files[0];
-  var reader = new FileReader();
-  reader.onloadend = function () {
-    document.getElementById("targetText").style.backgroundImage =
-      "url(" + reader.result + ")";
+document.getElementById("getPicture").addEventListener("change", () => {
+  const file = document.getElementById("getPicture").files[0];
+  const reader = new FileReader();
+  reader.onloadend = () => {
+    document.getElementById("targetText").style.backgroundImage = "url(" + reader.result + ")";
   };
-  if (file) {
-    reader.readAsDataURL(file);
-  } else {
-  }
-}
+  if (file) reader.readAsDataURL(file);
+});
 
-// window.addEventListener("load", function () {
-//   document
-//     .querySelector('input[type="file"]')
-//     .addEventListener("change", function () {
-//       if (this.files && this.files[0]) {
-//         var img = document.querySelector("img"); // $('img')[0]
-//         img.src = URL.createObjectURL(this.files[0]); // set src to blob url
-        // img.setAttribute("display", "absolute");
-           
-        // img.onload = imageIsLoaded;
-        
-//       }
-//     });
-
-    
-// });
-
-// function imageIsLoaded() { 
-//   const pic = document.getElementById("user-picture");
-//   pic.setAttribute("display", "absolute");
-//   alert(this.src); // blob url
-//   // update width and height ...
-// }
-
-// const inspiration = document.getElementById("inspiration")
 let url = "http://api.datamuse.com/words?"
-
 
 window.findWord = (filter) => {
   const searchTerms = document.getElementById("inspiration-search").value;
@@ -199,7 +146,6 @@ window.findWord = (filter) => {
   fetch(url + params.toString()  )
     .then( resp => resp.json())
     .then((data) => pareseDisplayData(data));
-
 };
 
 function pareseDisplayData(data) {
@@ -214,7 +160,7 @@ function pareseDisplayData(data) {
   document.getElementById("inspiration-delete").style.display = "block";
 }
 
-//https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+//From: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
