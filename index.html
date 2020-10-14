@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8304861193.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="./dist/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Cinzel+Decorative&family=Codystar&family=Dancing+Script&family=Finger+Paint&family=Fredericka+the+Great&family=Gloria+Hallelujah&family=Indie+Flower&family=Luckiest+Guy&family=Megrim&family=Monoton&family=Peddana&family=Permanent+Marker&family=Special+Elite&family=VT323&display=swap"rel="stylesheet">
     <title>Poetry Editor</title>
   </head>
 
   <body>
     
-
     <div class="toolbox">
       <h1>Poetry Editor</h1>
 
@@ -19,6 +19,33 @@
         <textarea id="submitedText" autocapitalize="off" placeholder="Enter your text here."></textarea>
         <button onclick="submitText()" type="button" id="submitbutton">Submit text</button>
         <button onclick="clearText('targetText')" type="button">Clear text</button>
+      </div>
+      
+      <h5 id="current-font-style" class="label-description"></h5>
+      <div class="dropdown-trigger">
+        <button class="dropdown-btn">Font Style <i class="fas fa-angle-down"></i></button>
+        <ul class='dropdown-menu'>
+          <li class='option' onclick="changeFontOption('Indie Flower')">Indie Flower</li>
+          <li class='option' onclick="changeFontOption('Permanent Marker')">Permanent Marker</li>
+          <li class='option' onclick="changeFontOption('Gloria Hallelujah')">Gloria Hallelujah</li>
+          <li class='option' onclick="changeFontOption('VT323')">VT323</li>
+          <li class='option' onclick="changeFontOption('Monoton')">Monoton</li>
+          <li class='option' onclick="changeFontOption('Luckiest Guy')">Luckiest Guy</li>
+          <li class='option' onclick="changeFontOption('Special Elite')">Special Elite</li>
+          <li class='option' onclick="changeFontOption('Fredericka the Great')">Fredericka the Great</li>
+          <li class='option' onclick="changeFontOption('Cabin Sketch')">Cabin Sketch</li>
+          <li class='option' onclick="changeFontOption('Cinzel Decorative')">Cinzel Decorative</li>
+          <li class='option' onclick="changeFontOption('Megrim')">Megrim</li>
+          <li class='option' onclick="changeFontOption('Finger Paint')">Finger Paint</li>
+          <li class='option' onclick="changeFontOption('Codystar')">Codystar</li>
+          <li class='option' onclick="changeFontOption('Peddana')">Peddana</li>
+          <li class='option' onclick="changeFontOption('Dancing Script')">Dancing Script</li>
+          <li class='option' onclick="changeFontOption('Times')">Times New Roman</li>
+          <li class='option' onclick="changeFontOption('Helvetica')">Helvetica</li>
+          <li class='option' onclick="changeFontOption('monospace')">Monospace</li>
+          <li class='option' onclick="changeFontOption('fantasy')">Fantasy</li>
+          <li class='option' onclick="changeFontOption('Comic Sans MS')">Comic Sans</li>
+        </ul>
       </div>
 
       <button class="editable" onclick="toggleEditable()" type="button">Toggle Editable</button>
@@ -72,23 +99,12 @@
 
         <div>
             <p id="inspiration-results"></p>
+            <button id="inspiration-delete" onclick="clearText('inspiration-results')" type="button">Clear text</button>
         </div>
-          <button onclick="clearText('inspiration-results')" type="button">Clear text</button>
-
-
       </div>
 
 
-
-
-   
       
-      
-      
-      
-      
-    
-
     </div>
 
     <div class="canvas">
@@ -98,11 +114,15 @@
         <div id="user-picture" alt="user-picture"></div>
       </div>
     
-    
-    
       <button onclick="generateText()" type="button">Generate text</button>
     
     </div>
+
+    <div class="footer-right">
+      <i class="fab fa-github"></i>      
+      <i class="fab fa-linkedin"></i>
+    </div>
+
 
     <script src="./dist/main.js"></script>
    

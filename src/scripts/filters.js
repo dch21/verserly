@@ -1,7 +1,3 @@
-// export const changeColor = () => picker.addEventListener("change", () => {
-//   document.getElementById("targetText").style.backgroundColor = this.value;
-// });
-
 export const toggleEditable = () => {
  const spans = document.querySelectorAll("span")
  if (!window.editable) {
@@ -16,3 +12,7 @@ export const toggleEditable = () => {
      window.editable = false;
  }
 };
+
+export const changeFontOption = (fontStyle) =>{
+    document.getElementById("targetText").style.fontFamily = fontStyle;
+}

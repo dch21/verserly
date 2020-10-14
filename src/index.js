@@ -1,8 +1,9 @@
 import "./styles/index.scss";
-import { toggleEditable } from "./scripts/filters";
+import { toggleEditable, changeFontOption } from "./scripts/filters";
 
 window.editable = false
 window.toggleEditable = toggleEditable
+window.changeFontOption = changeFontOption;
 
 const colorPicker = document.getElementById("colorPicker");
 
@@ -143,6 +144,7 @@ window.clearText = (area) => {
 
   if (area === "inspiration-results") {
     document.getElementById("inspiration-results").style.display = "none"
+    document.getElementById("inspiration-delete").style.display = "none"
   }
 };
 
@@ -209,6 +211,7 @@ function pareseDisplayData(data) {
     resultsBox.append(span);
   })
   resultsBox.style.display = "block"
+  document.getElementById("inspiration-delete").style.display = "block";
 }
 
 //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
