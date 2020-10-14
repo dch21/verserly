@@ -1,9 +1,12 @@
 import "./styles/index.scss";
-import { toggleEditable, changeFontOption } from "./scripts/filters";
+import { toggleEditable, changeFontOption, extend } from "./scripts/filters";
 
 window.editable = false
 window.toggleEditable = toggleEditable
 window.changeFontOption = changeFontOption;
+window.extend = extend;
+window.heightChanges = 0
+window.widthChanges = 0
 
 const colorPicker = document.getElementById("colorPicker");
 colorPicker.addEventListener("change", () => {

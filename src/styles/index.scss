@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
+html, body, div, applet, object, iframe,
 h2, h3, h4, h5, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-family: Gloria Hallelujah;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -45,6 +46,10 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+button {
+    font-family: inherit;
+    font-size: 11px;
 }
 
 
@@ -157,7 +162,7 @@ span.invisible {
 
 .canvas {
     margin-top: 50px;
-    margin-left: 80px;
+    margin-left: 30px;
 }
 
 .user-container {
@@ -166,7 +171,7 @@ span.invisible {
 
 #targetText {
     border: 1px rgb(193, 186, 186) solid;
-    height: 600px;
+    height: 500px; 
     width: 700px;
     border-radius: 5px;
     white-space: pre-wrap;
@@ -175,8 +180,7 @@ span.invisible {
     height: 500px; 
     line-height: 1.45;
     
-    width: 600px;
-       background-image:url('');
+    background-image:url('');
     background-size:cover;
     background-position: center;
     position: relative;
