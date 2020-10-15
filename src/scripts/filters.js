@@ -27,3 +27,4 @@ export const changeFontOption = (fontStyle) =>{
     document.getElementById("targetText").style.fontFamily = fontStyle;
     document.getElementById("current-font-style").innerHTML = `Font Style: ${fontStyle}`;
 }
+

@@ -21,7 +21,7 @@
         <button onclick="clearText('targetText')" type="button">Clear text</button>
       </div>
       
-      <h5 id="current-style" class="label-description">Font Size</h5>
+      <h5 class="label-description">Font Size</h5>
       <div>
         <input id="fontSize" type="range" min="5" max="80" value="14">
       </div>
@@ -69,6 +69,7 @@
         <ul class='dropdown-menu'>
           <li class='option' onclick="changeErasureOption('blackout')">Blackout</li>
           <li class='option' onclick="changeErasureOption('invisible')">Invisible</li>
+          <li class='option' onclick="changeErasureOption('fade-out')">Fade-Out</li>
           <li class='option' onclick="changeErasureOption('line-through')">Line-through</li>
         </ul>
       </div>
@@ -120,7 +121,7 @@
       <div class="user-container">
         <div spellcheck="false" id="targetText"></div>
       </div>
-      <button onclick="generateText()" type="button">Generate text</button>
+      <button onclick="generateText('I heard a Fly buzz - when I died -\nThe Stillness in the Room\nWas like the Stillness in the Air -\nBetween the Heaves of Storm\n')" type="button">Generate text</button>
     </div>
 
     <div class="right-panel">
@@ -136,6 +137,380 @@
         </div>
       </div>
 
+      <div class="filters">
+        <h3> Built-in Filter Modes</h3>
+        <p onclick="internetPoet()">Famous Internet Poet Mode</p>
+        <p onclick="sonnet()">Shakespearean Anti-Sonnet #18</p>
+      </div>
+
+<!-- broke -->
+      <div spellcheck="false" id="sonnet" style="font-size: 20px; font-family: &quot;Special Elite&quot;;"><span
+          class="visible fade-out" contenteditable="false">        S</span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">l</span><span class="visible fade-out"
+          contenteditable="false">l</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">I</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">c</span><span class="visible" contenteditable="false">o</span><span class="visible"
+          contenteditable="false">m</span><span class="visible" contenteditable="false">p</span><span class="visible"
+          contenteditable="false">a</span><span class="visible" contenteditable="false">r</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">t</span><span class="visible" contenteditable="false">h</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false">e</span><span class="visible"
+          contenteditable="false"> </span><span class="visible" contenteditable="false">t</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">s</span><span class="visible fade-out" contenteditable="false">u</span><span
+          class="visible fade-out" contenteditable="false">m</span><span class="visible fade-out"
+          contenteditable="false">m</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">r</span><span class="visible fade-out"
+          contenteditable="false">’</span><span class="visible fade-out" contenteditable="false">s</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">d</span><span
+          class="visible fade-out" contenteditable="false">a</span><span class="visible fade-out"
+          contenteditable="false">y</span><span class="visible fade-out" contenteditable="false">?</span><span
+          class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">T</span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">o</span><span
+          class="visible fade-out" contenteditable="false">u</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">a</span><span class="visible fade-out"
+          contenteditable="false">r</span><span class="visible fade-out" contenteditable="false">t</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">m</span><span
+          class="visible fade-out" contenteditable="false">o</span><span class="visible fade-out"
+          contenteditable="false">r</span><span class="visible fade-out" contenteditable="false">e</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">l</span><span
+          class="visible fade-out" contenteditable="false">o</span><span class="visible fade-out"
+          contenteditable="false">v</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">l</span><span class="visible fade-out"
+          contenteditable="false">y</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">n</span><span
+          class="visible fade-out" contenteditable="false">d</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">m</span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">r</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">t</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">m</span><span
+          class="visible fade-out" contenteditable="false">p</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">r</span><span
+          class="visible fade-out" contenteditable="false">a</span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">.</span><span class="visible" contenteditable="false">
+        </span><span class="visible" contenteditable="false">R</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false">u</span><span class="visible"
+          contenteditable="false">g</span><span class="visible" contenteditable="false">h</span><span class="visible"
+          contenteditable="false"> </span><span class="visible" contenteditable="false">w</span><span class="visible"
+          contenteditable="false">i</span><span class="visible" contenteditable="false">n</span><span class="visible"
+          contenteditable="false">d</span><span class="visible" contenteditable="false">s</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">d</span><span
+          class="visible fade-out" contenteditable="false">o</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">k</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">h</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span
+          class="visible" contenteditable="false">d</span><span class="visible" contenteditable="false">a</span><span
+          class="visible" contenteditable="false">r</span><span class="visible" contenteditable="false">l</span><span
+          class="visible" contenteditable="false">i</span><span class="visible" contenteditable="false">n</span><span
+          class="visible" contenteditable="false">g</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">b</span><span class="visible fade-out"
+          contenteditable="false">u</span><span class="visible fade-out" contenteditable="false">d</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">o</span><span class="visible fade-out"
+          contenteditable="false">f</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">M</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">y</span><span class="visible fade-out"
+          contenteditable="false">,</span><span class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">A</span><span class="visible fade-out"
+          contenteditable="false">n</span><span class="visible fade-out" contenteditable="false">d</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">s</span><span
+          class="visible fade-out" contenteditable="false">u</span><span class="visible fade-out"
+          contenteditable="false">m</span><span class="visible fade-out" contenteditable="false">m</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">r</span><span class="visible fade-out" contenteditable="false">’</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">l</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">t</span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">l</span><span
+          class="visible fade-out" contenteditable="false">l</span><span class="visible" contenteditable="false"> </span><span
+          class="visible" contenteditable="false">t</span><span class="visible" contenteditable="false">o</span><span
+          class="visible" contenteditable="false">o</span><span class="visible" contenteditable="false"> </span><span
+          class="visible" contenteditable="false">s</span><span class="visible" contenteditable="false">h</span><span
+          class="visible" contenteditable="false">o</span><span class="visible" contenteditable="false">r</span><span
+          class="visible" contenteditable="false">t</span><span class="visible" contenteditable="false"> </span><span
+          class="visible" contenteditable="false">a</span><span class="visible fade-out" contenteditable="false"> </span><span
+          class="visible" contenteditable="false">d</span><span class="visible" contenteditable="false">a</span><span
+          class="visible" contenteditable="false">t</span><span class="visible" contenteditable="false">e</span><span
+          class="visible" contenteditable="false">.</span><span class="visible" contenteditable="false">
+        </span><span class="visible" contenteditable="false">S</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false">m</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false">t</span><span class="visible"
+          contenteditable="false">i</span><span class="visible" contenteditable="false">m</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">t</span><span class="visible" contenteditable="false">o</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">h</span><span class="visible" contenteditable="false">o</span><span class="visible"
+          contenteditable="false">t</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">h</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">y</span><span class="visible fade-out" contenteditable="false">e</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">o</span><span
+          class="visible fade-out" contenteditable="false">f</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">v</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">n</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">s</span><span
+          class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">i</span><span class="visible fade-out" contenteditable="false">n</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">s</span><span class="visible fade-out" contenteditable="false">,</span><span
+          class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">A</span><span class="visible fade-out"
+          contenteditable="false">n</span><span class="visible fade-out" contenteditable="false">d</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">o</span><span
+          class="visible fade-out" contenteditable="false">f</span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">n</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">i</span><span class="visible fade-out"
+          contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">g</span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">l</span><span
+          class="visible fade-out" contenteditable="false">d</span><span class="visible" contenteditable="false"> </span><span
+          class="visible" contenteditable="false">c</span><span class="visible" contenteditable="false">o</span><span
+          class="visible" contenteditable="false">m</span><span class="visible" contenteditable="false">p</span><span
+          class="visible" contenteditable="false">l</span><span class="visible" contenteditable="false">e</span><span
+          class="visible" contenteditable="false">x</span><span class="visible" contenteditable="false">i</span><span
+          class="visible" contenteditable="false">o</span><span class="visible" contenteditable="false">n</span><span
+          class="visible" contenteditable="false"> </span><span class="visible" contenteditable="false">d</span><span
+          class="visible" contenteditable="false">i</span><span class="visible" contenteditable="false">m</span><span
+          class="visible" contenteditable="false">m</span><span class="visible" contenteditable="false">e</span><span
+          class="visible" contenteditable="false">d</span><span class="visible" contenteditable="false">;</span><span
+          class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">A</span><span class="visible fade-out"
+          contenteditable="false">n</span><span class="visible fade-out" contenteditable="false">d</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">v</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">r</span><span
+          class="visible fade-out" contenteditable="false">y</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">f</span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">r</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">f</span><span class="visible fade-out"
+          contenteditable="false">r</span><span class="visible fade-out" contenteditable="false">o</span><span
+          class="visible fade-out" contenteditable="false">m</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">f</span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">r</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">m</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">m</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">d</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">c</span><span class="visible fade-out"
+          contenteditable="false">l</span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">n</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">s</span><span
+          class="visible fade-out" contenteditable="false">,</span><span class="visible" contenteditable="false">
+        </span><span class="visible" contenteditable="false">B</span><span class="visible"
+          contenteditable="false">y</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">c</span><span class="visible fade-out" contenteditable="false">h</span><span
+          class="visible fade-out" contenteditable="false">a</span><span class="visible fade-out"
+          contenteditable="false">n</span><span class="visible fade-out" contenteditable="false">c</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">,</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">r</span><span class="visible"
+          contenteditable="false"> </span><span class="visible" contenteditable="false">n</span><span class="visible"
+          contenteditable="false">a</span><span class="visible" contenteditable="false">t</span><span class="visible"
+          contenteditable="false">u</span><span class="visible" contenteditable="false">r</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false">’</span><span class="visible"
+          contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">c</span><span class="visible" contenteditable="false">h</span><span class="visible"
+          contenteditable="false">a</span><span class="visible" contenteditable="false">n</span><span class="visible"
+          contenteditable="false">g</span><span class="visible" contenteditable="false">i</span><span class="visible"
+          contenteditable="false">n</span><span class="visible" contenteditable="false">g</span><span class="visible"
+          contenteditable="false"> </span><span class="visible" contenteditable="false">c</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false">u</span><span class="visible"
+          contenteditable="false">r</span><span class="visible" contenteditable="false">s</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false">,</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">u</span><span
+          class="visible fade-out" contenteditable="false">n</span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">r</span><span
+          class="visible fade-out" contenteditable="false">i</span><span class="visible fade-out"
+          contenteditable="false">m</span><span class="visible fade-out" contenteditable="false">m</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">d</span><span class="visible fade-out" contenteditable="false">;</span><span
+          class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">B</span><span class="visible fade-out"
+          contenteditable="false">u</span><span class="visible fade-out" contenteditable="false">t</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">t</span><span
+          class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">y</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">t</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">r</span><span class="visible fade-out" contenteditable="false">n</span><span
+          class="visible fade-out" contenteditable="false">a</span><span class="visible fade-out"
+          contenteditable="false">l</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">s</span><span class="visible" contenteditable="false">u</span><span class="visible"
+          contenteditable="false">m</span><span class="visible" contenteditable="false">m</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false">r</span><span class="visible"
+          contenteditable="false"> </span><span class="visible" contenteditable="false">s</span><span class="visible"
+          contenteditable="false">h</span><span class="visible" contenteditable="false">a</span><span class="visible"
+          contenteditable="false">l</span><span class="visible" contenteditable="false">l</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">n</span><span
+          class="visible fade-out" contenteditable="false">o</span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">f</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">d</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">,</span><span
+          class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">N</span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">r</span><span class="visible"
+          contenteditable="false"> </span><span class="visible" contenteditable="false">l</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false">s</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">p</span><span class="visible" contenteditable="false">o</span><span class="visible"
+          contenteditable="false">s</span><span class="visible" contenteditable="false">s</span><span class="visible"
+          contenteditable="false">e</span><span class="visible" contenteditable="false">s</span><span class="visible"
+          contenteditable="false">s</span><span class="visible" contenteditable="false">i</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false">n</span><span class="visible"
+          contenteditable="false"> </span><span class="visible" contenteditable="false">o</span><span class="visible"
+          contenteditable="false">f</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">h</span><span
+          class="visible fade-out" contenteditable="false">a</span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">f</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">i</span><span class="visible fade-out"
+          contenteditable="false">r</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">h</span><span
+          class="visible fade-out" contenteditable="false">o</span><span class="visible fade-out"
+          contenteditable="false">u</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">w</span><span
+          class="visible fade-out" contenteditable="false">’</span><span class="visible fade-out"
+          contenteditable="false">s</span><span class="visible fade-out" contenteditable="false">t</span><span
+          class="visible fade-out" contenteditable="false">,</span><span class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">N</span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">r</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">s</span><span
+          class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">l</span><span
+          class="visible fade-out" contenteditable="false">l</span><span class="visible" contenteditable="false"> </span><span
+          class="visible" contenteditable="false">d</span><span class="visible" contenteditable="false">e</span><span
+          class="visible" contenteditable="false">a</span><span class="visible" contenteditable="false">t</span><span
+          class="visible" contenteditable="false">h</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">b</span><span class="visible fade-out"
+          contenteditable="false">r</span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">g</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">t</span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">o</span><span
+          class="visible fade-out" contenteditable="false">u</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">w</span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">n</span><span
+          class="visible fade-out" contenteditable="false">d</span><span class="visible fade-out"
+          contenteditable="false">’</span><span class="visible fade-out" contenteditable="false">r</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">s</span><span class="visible fade-out" contenteditable="false">t</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">n</span><span class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">i</span><span class="visible fade-out" contenteditable="false">s</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">s</span><span
+          class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">d</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">,</span><span class="visible fade-out" contenteditable="false">
+        </span><span class="visible fade-out" contenteditable="false">W</span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">n</span><span class="visible" contenteditable="false"> </span><span
+          class="visible" contenteditable="false">i</span><span class="visible" contenteditable="false">n</span><span
+          class="visible" contenteditable="false"> </span><span class="visible" contenteditable="false">e</span><span
+          class="visible" contenteditable="false">t</span><span class="visible" contenteditable="false">e</span><span
+          class="visible" contenteditable="false">r</span><span class="visible" contenteditable="false">n</span><span
+          class="visible" contenteditable="false">a</span><span class="visible" contenteditable="false">l</span><span
+          class="visible" contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">l</span><span
+          class="visible fade-out" contenteditable="false">i</span><span class="visible fade-out"
+          contenteditable="false">n</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">t</span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">T</span><span class="visible" contenteditable="false">i</span><span class="visible"
+          contenteditable="false">m</span><span class="visible" contenteditable="false">e</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">t</span><span
+          class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">u</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">g</span><span
+          class="visible fade-out" contenteditable="false">r</span><span class="visible fade-out"
+          contenteditable="false">o</span><span class="visible fade-out" contenteditable="false">w</span><span
+          class="visible fade-out" contenteditable="false">’</span><span class="visible fade-out"
+          contenteditable="false">s</span><span class="visible fade-out" contenteditable="false">t</span><span
+          class="visible fade-out" contenteditable="false">.</span><span class="visible" contenteditable="false">
+        </span><span class="visible" contenteditable="false">S</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">l</span><span class="visible" contenteditable="false">o</span><span class="visible"
+          contenteditable="false">n</span><span class="visible" contenteditable="false">g</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">a</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">m</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">n</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">c</span><span
+          class="visible fade-out" contenteditable="false">a</span><span class="visible fade-out"
+          contenteditable="false">n</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">b</span><span class="visible fade-out" contenteditable="false">r</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">t</span><span
+          class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">,</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">o</span><span
+          class="visible fade-out" contenteditable="false">r</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">y</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">c</span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">n</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">s</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">,</span><span class="visible"
+          contenteditable="false">
+        </span><span class="visible" contenteditable="false">S</span><span class="visible"
+          contenteditable="false">o</span><span class="visible" contenteditable="false"> </span><span class="visible"
+          contenteditable="false">l</span><span class="visible" contenteditable="false">o</span><span class="visible"
+          contenteditable="false">n</span><span class="visible" contenteditable="false">g</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">l</span><span
+          class="visible fade-out" contenteditable="false">i</span><span class="visible fade-out"
+          contenteditable="false">v</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">t</span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible fade-out"
+          contenteditable="false">,</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">a</span><span class="visible fade-out" contenteditable="false">n</span><span
+          class="visible fade-out" contenteditable="false">d</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">t</span><span class="visible fade-out"
+          contenteditable="false">h</span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span
+          class="visible fade-out" contenteditable="false">g</span><span class="visible fade-out"
+          contenteditable="false">i</span><span class="visible fade-out" contenteditable="false">v</span><span
+          class="visible fade-out" contenteditable="false">e</span><span class="visible fade-out"
+          contenteditable="false">s</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">l</span><span class="visible fade-out" contenteditable="false">i</span><span
+          class="visible fade-out" contenteditable="false">f</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible" contenteditable="false"> </span><span class="visible fade-out"
+          contenteditable="false">t</span><span class="visible fade-out" contenteditable="false">o</span><span class="visible"
+          contenteditable="false"> </span><span class="visible fade-out" contenteditable="false">t</span><span
+          class="visible fade-out" contenteditable="false">h</span><span class="visible fade-out"
+          contenteditable="false">e</span><span class="visible fade-out" contenteditable="false">e</span><span
+          class="visible fade-out" contenteditable="false">.</span></div>
+
+
+<!-- broke -->
     </div>
 
 

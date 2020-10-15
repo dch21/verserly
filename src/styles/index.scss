@@ -160,6 +160,11 @@ span.invisible {
    opacity: 0
 }
 
+span.fade-out {
+   color: grey;
+   opacity: 0.3;
+}
+
 .canvas {
     margin-top: 50px;
     margin-left: 50px;
@@ -211,11 +216,13 @@ span.invisible {
     margin-bottom: 3px;
     position: relative;
     cursor: pointer;
+    font-weight: 800;
 }
 
 .instructions-text {
     display: none;
     position: absolute;
+    font-weight: 400;
 }
 
 .instructions-header:hover > .instructions-text {
@@ -223,4 +230,21 @@ span.invisible {
     border: #FAF7EB solid 2px;
     color :black;
     border-radius: 3px;
+    z-index: 3;
+    background-color: #FFFFA5;
+    padding: 20px
+}
+
+.filters {
+    margin-top: 30px;
+}
+
+.filters h3 {
+    color: rgb(57, 57, 159);
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+#sonnet {
+    display: none;
 }

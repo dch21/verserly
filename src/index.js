@@ -1,5 +1,6 @@
 import "./styles/index.scss";
 import { toggleEditable, changeFontOption, extend } from "./scripts/filters";
+import { sonnet, internetPoet } from "../templates/demos";
 
 window.editable = false
 window.toggleEditable = toggleEditable
@@ -7,6 +8,9 @@ window.changeFontOption = changeFontOption;
 window.extend = extend;
 window.heightChanges = 0
 window.widthChanges = 0
+
+window.sonnet = sonnet;
+window.internetPoet = internetPoet;
 
 const colorPicker = document.getElementById("colorPicker");
 colorPicker.addEventListener("change", () => {
@@ -102,29 +106,31 @@ function getWord(ele) {
   return letters
 }
 
+// const submittedText =
+//   "I heard a Fly buzz - when I died -\nThe Stillness in the Room\nWas like the Stillness in the Air -\nBetween the Heaves of Storm\n";
 
-window.generateText = () => {
-const submittedText = "I heard a Fly buzz - when I died -\nThe Stillness in the Room\nWas like the Stillness in the Air -\nBetween the Heaves of Storm\n"
+window.generateText = (submittedText) => {
+  
+  submittedText.split("").forEach((letter) => {
+    const span = document.createElement("span");
+    span.className = "visible";
+    span.setAttribute("contenteditable", false);
+    span.setAttribute("z-index", 3);
+    span.innerHTML = letter;
+    span.addEventListener("click", function () {
+      if (window.erasureSelection === "character") {
+        this.classList.toggle(`${window.erasureOption}`);
+      } else {
+        getWord(this).forEach((letterElement) => {
+          letterElement.classList.toggle(`${window.erasureOption}`);
+        });
+      }
+    });
 
-submittedText.split("").forEach((letter) => {
-  const span = document.createElement("span");
-  span.className = "visible";
-  span.setAttribute("contenteditable", false);
-  span.setAttribute("z-index", 3);
-  span.innerHTML = letter;
-  span.addEventListener("click", function () {
-    if (window.erasureSelection === "character") {
-      this.classList.toggle(`${window.erasureOption}`);
-    } else {
-      getWord(this).forEach((letterElement) => {
-        letterElement.classList.toggle(`${window.erasureOption}`);
-      });
-    }
+    const paragraph = document.getElementById("targetText");
+    paragraph.append(span);
   });
-
-  const paragraph = document.getElementById("targetText");
-  paragraph.append(span);
-});};
+};
 
 window.clearText = (area) => {
   document.getElementById(area).innerHTML = "";
