@@ -2,7 +2,8 @@ import "./styles/index.scss";
 import { toggleEditable, changeFontOption, extend } from "./scripts/filters";
 import { demo, internetPoet } from "../templates/demos";
 
-window.editable = false
+window.editable = false;
+window.eraseable = true;
 window.toggleEditable = toggleEditable
 window.changeFontOption = changeFontOption;
 window.extend = extend;
