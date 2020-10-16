@@ -77,7 +77,11 @@ h1 {
     margin-bottom: 5px;
 }
 
-.editable {
+.editable-container {
+    display: inline;
+}
+
+#editable-button, #erasable-button {
     margin-top: 20px;
     width: fit-content;
 }
@@ -121,11 +125,16 @@ ul.dropdown-menu {
   list-style: none;
   border-radius: 5px;
   z-index: 3;
-  background-color: rgb(148, 152, 191);
+  background-color: #FFFFA5;
+}
+
+.dropdown-menu > p {
+    padding: 5px;
+    font-size: 13px
 }
 
 li {
-  padding: 1px;
+  padding: 5px;
   font-size: 12px;
   cursor: pointer;
 }

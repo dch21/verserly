@@ -17,9 +17,12 @@ export const demo = (name) => {
     document.getElementById(name).id = "targetText"
     document.getElementById("targetText").childNodes.forEach( (child) => {
             child.addEventListener("click", function () {
-              if (window.erasureSelection === "character") {
+              if (window.erasureSelection === "character" && window.eraseable) {
                 this.classList.toggle(`${window.erasureOption}`);
-              } else {
+              } else if (
+                window.erasureSelection === "word" &&
+                window.eraseable
+              ) {
                 getWord(this).forEach((letterElement) => {
                   letterElement.classList.toggle(`${window.erasureOption}`);
                 });

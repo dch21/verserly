@@ -1,10 +1,12 @@
 import "./styles/index.scss";
-import { toggleEditable, changeFontOption, extend } from "./scripts/filters";
+import { toggleEditable, changeFontOption, extend, toggleErasable } from "./scripts/filters";
 import { demo, internetPoet } from "../templates/demos";
+
 
 window.editable = false;
 window.eraseable = true;
 window.toggleEditable = toggleEditable
+window.toggleErasable = toggleErasable;
 window.changeFontOption = changeFontOption;
 window.extend = extend;
 window.heightChanges = 0
@@ -12,6 +14,7 @@ window.widthChanges = 0
 
 window.demo = demo;
 window.internetPoet = internetPoet;
+
 
 const colorPicker = document.getElementById("colorPicker");
 colorPicker.addEventListener("change", () => {
@@ -28,17 +31,6 @@ window.erasureOption = erasureOption;
 
 let erasureSelection = "character";
 window.erasureSelection = erasureSelection;
-
-// document.getElementById("current-style").innerHTML = `Erasure Style: ${
-//   window.erasureOption.charAt(0).toUpperCase() + window.erasureOption.slice(1)
-// }`;
-
-// document.getElementById(
-//   "current-selection-style"
-// ).innerHTML = `Selection Style: ${
-//   window.erasureSelection.charAt(0).toUpperCase() +
-//   window.erasureSelection.slice(1)
-// }`;
 
 window.changeErasureOption = (option) => {
   window.erasureOption = option
@@ -70,12 +62,12 @@ window.submitText = () => {
     span.setAttribute("contenteditable", false);
     span.innerHTML = letter;
     span.addEventListener("click", function() {
-      if (window.erasureSelection === "character") {
+      if (window.erasureSelection === "character" && window.eraseable) {
         this.classList.toggle(`${window.erasureOption}`);
-      } else {
-        getWord(this).forEach((letterElement)=>{
+      } else if (window.erasureSelection === "word" && window.eraseable) {
+        getWord(this).forEach((letterElement) => {
           letterElement.classList.toggle(`${window.erasureOption}`);
-        })
+        });
       }
     });
 
@@ -108,9 +100,6 @@ window.getWord = function getWord(ele) {
   
 }
 
-// const submittedText =
-//   "I heard a Fly buzz - when I died -\nThe Stillness in the Room\nWas like the Stillness in the Air -\nBetween the Heaves of Storm\n";
-
 window.generateText = (submittedText) => {
   
   submittedText.split("").forEach((letter) => {
@@ -120,9 +109,9 @@ window.generateText = (submittedText) => {
     span.setAttribute("z-index", 3);
     span.innerHTML = letter;
     span.addEventListener("click", function () {
-      if (window.erasureSelection === "character") {
+      if (window.erasureSelection === "character" && window.eraseable) {
         this.classList.toggle(`${window.erasureOption}`);
-      } else {
+      } else if (window.erasureSelection === "word" && window.eraseable) {
         getWord(this).forEach((letterElement) => {
           letterElement.classList.toggle(`${window.erasureOption}`);
         });

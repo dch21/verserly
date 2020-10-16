@@ -11,7 +11,15 @@ export const toggleEditable = () => {
      });
      window.editable = false;
  }
+   document.getElementById("editable-button").innerHTML = window.editable ? "Editable: On" : "Editable: Off"
 };
+
+export const toggleErasable = () => {
+  window.eraseable = !window.eraseable
+  document.getElementById("erasable-button").innerHTML = window.eraseable ? "Erasure: On" : "Erasure: Off"
+};
+
+
 
 export const extend = (direction) => {
       if (direction === "height") {
