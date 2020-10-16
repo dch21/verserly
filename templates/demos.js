@@ -60,7 +60,7 @@ export const internetPoet = () => {
     window.generateText(
         "don’t mistake \nsalt for sugar \nit never really left the hands \nof those who broke you \nthe thing \nworth holding onto \nwould not come for you \nyour sweetness belongs \nonly to yourself \n"
     );
-    canvas.style.backgroundImage = "url('../dist/images/cake.jpg')"
+    canvas.style.backgroundImage = "url('../images/cake.jpg')"
     canvas.style.fontFamily = "Times";
     changeSelectionOption("word");
 
