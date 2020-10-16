@@ -1,6 +1,6 @@
 import "./styles/index.scss";
 import { toggleEditable, changeFontOption, extend } from "./scripts/filters";
-import { sonnet, internetPoet } from "../templates/demos";
+import { demo, internetPoet } from "../templates/demos";
 
 window.editable = false
 window.toggleEditable = toggleEditable
@@ -9,7 +9,7 @@ window.extend = extend;
 window.heightChanges = 0
 window.widthChanges = 0
 
-window.sonnet = sonnet;
+window.demo = demo;
 window.internetPoet = internetPoet;
 
 const colorPicker = document.getElementById("colorPicker");
@@ -83,7 +83,8 @@ window.submitText = () => {
   });
 };
 
-function getWord(ele) {
+window.getWord = function getWord(ele) {
+  
   let prev = ele.previousElementSibling
   let next = ele.nextElementSibling
   let letters = [ele]
@@ -102,8 +103,8 @@ function getWord(ele) {
         break;
       }
   }
-  
   return letters
+  
 }
 
 // const submittedText =

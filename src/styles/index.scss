@@ -245,6 +245,12 @@ span.fade-out {
     font-weight: 800;
 }
 
-#sonnet {
+.filters p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#sonnet, #order {
     display: none;
 }
