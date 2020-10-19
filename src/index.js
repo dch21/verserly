@@ -141,7 +141,7 @@ document.getElementById("getPicture").addEventListener("change", () => {
   if (file) reader.readAsDataURL(file);
 });
 
-let url = "http://api.datamuse.com/words?"
+let url = "https://api.datamuse.com/words?"
 
 window.findWord = (filter) => {
   const searchTerms = document.getElementById("inspiration-search").value;
