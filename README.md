@@ -2,23 +2,23 @@
 
 # Background and Overview
 
+Poetry Editor is an interactive editor used to create visual poetry and art. Writers, students, and teachers can use the editor to create and experiment visual poetry pieces. Erasure mode allows users to manipulate the text so certain words stand out visually, highlighting language choices in new and unexpected ways.  
 
-[Live Demo](Link)
+[Live Demo](https://dch21.github.io/poetrygenerator/)
 
 # Functionality and MVPs
 
 Poetry Generator will have the following features: 
 
-1) Ability to create Erasure Poetry using a variety of erasure filters and visual backgrounds. Users can click on a letter or word to make it disappear with a variety of settings. This would include blacked out, whited out, strike through, etc.
+1) Editor Toolbox: Users can input their own text and manipulate it via the toolbox to add visual elements. Tools include setting font size and type and the ability to add an image.
 
-[What is Erasure Poetry?](https://newrepublic.com/article/145396/trump-era-boom-erasure-poetry)
+2) Erasure Mode: Advanced features include the ability to create Erasure Poetry using a variety of erasure filters. Users can click on a letter or word to make it disappear with a variety of settings, including blacked out, whited out, strike through, and fade-out. 
 
-[Some Examples of Erasure Poetry](https://trishhopkinson.com/2018/06/10/6-styles-of-erasure-poetry-guest-blog-post-by-erin-dorney/)
+3) Use of [Datemuse API](https://www.datamuse.com/api/) to generate text and substitute words for inspiration. 
 
+Writers can enter a word and have the wessite generate rhymes, synonyms, antonyms, related words, homophones, and more. Users can also enter in a noun and have the generator return related adjectives and vice versa. 
 
-2) Use of APIs to generate text and substitute words 
-
-    -words API for a simple synonyms/ antonyms generation
+4) The editor also features sample creations that showcase the possbilites of the editor. 
 
 # Wireframes 
 
@@ -26,7 +26,7 @@ Poetry Generator will have the following features:
 
 # Architecture and Technology
 
-Medicore English Major will be built with Javascript, HTML, and CSS.
+Poetry Editor will be built with Javascript, HTML, and SCSS.
  
 # Implementation Timeline 
 
@@ -37,6 +37,3 @@ Day 2: Poetry Erasure functionality with filters/API implementation for suggest 
 Day 3: API implementation
 
 Day 4: CSS styling
-
-
-
