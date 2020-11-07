@@ -65,13 +65,16 @@
       </div>
 
       <div class="background-color">
-        <h5 class="label-description">Background Color</h5>
+        <h5 id="color-divider" class="label-description">Background Color</h5>
         <input type="color" id="colorPicker" value="#FAF7EB"/>
       </div>
 
       <h5 class="label-description">Background Picture</h5>
       <input type='file' id='getPicture' />
+      <button class="erasable-pic-button" onclick="removePic()" type="button">Remove Uploaded Pic</button>
 
+
+      <h5 id="eraser-divider"></h5>
       <button id="erasable-button" onclick="toggleErasable()" type="button">Erasure: On</button>
 
       <h5 id="current-style" class="label-description">Erasure Style: Blackout</h5>
@@ -94,7 +97,7 @@
         </ul>
       </div>
 
-      <h5 class="label-description">Dictionary/ Word Generator</h5>
+      <h5 id="dictionary-divider" class="label-description">Dictionary/ Word Generator</h5>
       <div>
         <textarea rows="3" cols="20" type="input" id="inspiration-search" placeholder="Enter word first, then click below to choose parameters"></textarea>
 
@@ -132,7 +135,7 @@
       <div class="user-container">
         <div spellcheck="false" id="targetText"></div>
       </div>
-      <button onclick="generateText('I heard a Fly buzz - when I died -\nThe Stillness in the Room\nWas like the Stillness in the Air -\nBetween the Heaves of Storm\n')" type="button">Generate text</button>
+      <button class="emily" onclick="generateText('Hope is the thing with feathers -\nThat perches in the soul -\nAnd sings the tune without the words -\nAnd never stops - at all\n')" type="button">Start with some Emily Dickinson?</button>
     </div>
 
     <div class="right-panel">

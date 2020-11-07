@@ -81,8 +81,19 @@ h1 {
     display: inline;
 }
 
-#editable-button, #erasable-button {
+#editable-button {
     margin-top: 20px;
+    width: fit-content;
+}
+
+#erasable-button {
+    width: fit-content;
+    margin-top: 6px;
+}
+
+.erasable-pic-button {
+    margin-top: 7px;
+    margin-bottom: 10px;
     width: fit-content;
 }
 
@@ -91,6 +102,21 @@ h1 {
     font-size: 14px;
     margin-top: 20px;
     margin-bottom: 6px;
+}
+
+#color-divider {
+    border-top: black 1px solid;
+    padding-top: 15px;
+}
+
+#dictionary-divider {
+    border-top: black 1px solid;
+    padding-top: 15px;
+}
+
+#eraser-divider {
+    border-top: black 1px solid;
+    padding-top: 5px;
 }
 
 .dropdown-btn {
@@ -183,6 +209,10 @@ span.fade-out {
 
 .user-container {
     position: relative;
+}
+
+.emily {
+    margin-top: 7px;
 }
 
 #targetText {

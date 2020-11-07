@@ -5,12 +5,12 @@ import { demo, internetPoet } from "../templates/demos";
 
 window.editable = false;
 window.eraseable = true;
-window.toggleEditable = toggleEditable
+window.toggleEditable = toggleEditable;
 window.toggleErasable = toggleErasable;
 window.changeFontOption = changeFontOption;
 window.extend = extend;
-window.heightChanges = 0
-window.widthChanges = 0
+window.heightChanges = 0;
+window.widthChanges = 0;
 
 window.demo = demo;
 window.internetPoet = internetPoet;
@@ -78,9 +78,9 @@ window.submitText = () => {
 
 window.getWord = function getWord(ele) {
   
-  let prev = ele.previousElementSibling
-  let next = ele.nextElementSibling
-  let letters = [ele]
+  let prev = ele.previousElementSibling;
+  let next = ele.nextElementSibling;
+  let letters = [ele];
   while (prev !== null && prev.innerHTML !== " ") {
     letters.push(prev);
     prev = prev.previousElementSibling;
@@ -96,7 +96,7 @@ window.getWord = function getWord(ele) {
         break;
       }
   }
-  return letters
+  return letters;
   
 }
 
@@ -127,8 +127,8 @@ window.clearText = (area) => {
   document.getElementById(area).innerHTML = "";
 
   if (area === "inspiration-results") {
-    document.getElementById("inspiration-results").style.display = "none"
-    document.getElementById("inspiration-delete").style.display = "none"
+    document.getElementById("inspiration-results").style.display = "none";
+    document.getElementById("inspiration-delete").style.display = "none";
   }
 };
 
@@ -140,6 +140,10 @@ document.getElementById("getPicture").addEventListener("change", () => {
   };
   if (file) reader.readAsDataURL(file);
 });
+
+window.removePic = () => {
+  document.getElementById("targetText").style.backgroundImage = "";
+};
 
 let url = "https://api.datamuse.com/words?"
 
