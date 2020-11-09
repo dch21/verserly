@@ -12,6 +12,8 @@ Check out the right section of the editor for examples of possible creations!
 
 ### Text Manipulation Tools
 
+![change](/images/text_change.gif)
+
 Writers can submit their original text or pieces that already have been written by others. This can include text such as poems, prose, recipes, articles, or historical documents. Verserly allows you to play around and explore the language of any piece of written text. Once submitted, the text appears in the editor. 
 
 Users can then change the font style and size. They can also edit or clear the text. If more space is needed, they can increase the canvas space by width and size. 
@@ -22,7 +24,11 @@ Writers can create [Erasure](https://poets.org/glossary/erasure) / [Blackout](ht
 
 ### Dictionary/ Thesaurus/ Word Generator
 
-Through the use of the [Datemuse API](https://www.datamuse.com/api/), writers can lookup and generate words for inspiration.Writers can enter a word and have the website generate rhymes, synonyms, antonyms, related words, homophones, and more. Once can also enter in a noun and have the generator return related adjectives and vice versa. 
+Through the [Datemuse API](https://www.datamuse.com/api/), writers can lookup and generate words for inspiration.Writers can enter a word and have the website generate rhymes, synonyms, antonyms, related words, homophones, and more. Once can also enter in a noun and have the generator return related adjectives and vice versa. 
+
+### Background Picture
+
+Writers can add and remove background pictures to further the visual elements of their text. 
 
 # Technology
 
