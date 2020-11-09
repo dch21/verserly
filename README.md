@@ -20,9 +20,13 @@ Users can then change the font style and size. They can also edit or clear the t
 
 ### Erasure/Blackout Poetry Mode
 
+![erasure](/images/mode.gif)
+
 Writers can create [Erasure](https://poets.org/glossary/erasure) / [Blackout](https://trishhopkinson.com/2018/06/10/6-styles-of-erasure-poetry-guest-blog-post-by-erin-dorney/) Poetry using a variety of erasure filters. Users can click on a letter or word to make it disappear with a variety of settings such as blacked-out, whited-out, strike-through, and fade-out. 
 
 ### Dictionary/ Thesaurus/ Word Generator
+
+![dict](/images/mode.gif)
 
 Through the [Datemuse API](https://www.datamuse.com/api/), writers can lookup and generate words for inspiration.Writers can enter a word and have the website generate rhymes, synonyms, antonyms, related words, homophones, and more. Once can also enter in a noun and have the generator return related adjectives and vice versa. 
 
