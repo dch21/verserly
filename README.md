@@ -12,9 +12,13 @@ Check out the right section of the editor for examples of possible creations!
 
 ### Text Manipulation Tools
 
-1) Editor Toolbox: Users can input their own text and manipulate it via the toolbox to add visual elements. Tools include setting font size and type and the ability to add an image.
+Writers can submit their original text or pieces that already have been written by others. This can include text such as poems, prose, recipes, articles, or historical documents. Verserly allows you to play around and explore the language of any piece of written text. Once submitted, the text appears in the editor. 
 
-2) Erasure Mode: Advanced features include the ability to create Erasure Poetry using a variety of erasure filters. Users can click on a letter or word to make it disappear with a variety of settings, including blacked out, whited out, strike through, and fade-out. 
+Users can then change the font style and size. They can also edit or clear the text. If more space is needed, they can increase the canvas space by width and size. 
+
+### Erasure/Blackout Poetry Mode
+
+Writers can create Erasure/Blackout Poetry using a variety of erasure filters. Users can click on a letter or word to make it disappear with a variety of settings, including blacked out, whited out, strike through, and fade-out. 
 
 3) Use of [Datemuse API](https://www.datamuse.com/api/) to generate text and substitute words for inspiration. 
 
