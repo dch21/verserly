@@ -6,7 +6,7 @@ Verserly is an interactive editor used to create visual poetry and art. Writers,
 
 Check out the right section of the editor for examples of possible creations!
 
-[Live Demo](https://dch21.github.io/poetrygenerator/)
+[Live Demo](https://dch21.github.io/verserly/)
 
 # Editor Toolbox
 
@@ -18,14 +18,11 @@ Users can then change the font style and size. They can also edit or clear the t
 
 ### Erasure/Blackout Poetry Mode
 
-Writers can create Erasure/Blackout Poetry using a variety of erasure filters. Users can click on a letter or word to make it disappear with a variety of settings, including blacked out, whited out, strike through, and fade-out. 
+Writers can create [Erasure](https://poets.org/glossary/erasure) / [Blackout](https://trishhopkinson.com/2018/06/10/6-styles-of-erasure-poetry-guest-blog-post-by-erin-dorney/) Poetry using a variety of erasure filters. Users can click on a letter or word to make it disappear with a variety of settings such as blacked-out, whited-out, strike-through, and fade-out. 
 
-3) Use of [Datemuse API](https://www.datamuse.com/api/) to generate text and substitute words for inspiration. 
+### Dictionary/ Thesaurus/ Word Generator
 
-Writers can enter a word and have the wessite generate rhymes, synonyms, antonyms, related words, homophones, and more. Users can also enter in a noun and have the generator return related adjectives and vice versa. 
-
-4) The editor also features sample creations that showcase the possbilites of the editor. 
-
+Through the use of the [Datemuse API](https://www.datamuse.com/api/), writers can lookup and generate words for inspiration.Writers can enter a word and have the website generate rhymes, synonyms, antonyms, related words, homophones, and more. Once can also enter in a noun and have the generator return related adjectives and vice versa. 
 
 # Technology
 
