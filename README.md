@@ -1,14 +1,16 @@
-# Poetry Generator (Working title) 
+# Verserly
 
 # Background and Overview
 
-Poetry Editor is an interactive editor used to create visual poetry and art. Writers, students, and teachers can use the editor to create and experiment visual poetry pieces. Erasure mode allows users to manipulate the text so certain words stand out visually, highlighting language choices in new and unexpected ways.  
+Verserly is an interactive editor used to create visual poetry and art. Writers, students, and teachers can use the editor to create and experiment visual poetry pieces. Erasure mode allows users to manipulate the text so certain words stand out visually, highlighting language choices in new and unexpected ways. There is also a built-in word generator that utlizes the Datamuse API to generate words for the writer that is in need of inspiration. 
+
+Check out the right section of the editor for examples of possible creations!
 
 [Live Demo](https://dch21.github.io/poetrygenerator/)
 
-# Functionality and MVPs
+# Editor Toolbox
 
-Poetry Generator will have the following features: 
+### Text Manipulation Tools
 
 1) Editor Toolbox: Users can input their own text and manipulate it via the toolbox to add visual elements. Tools include setting font size and type and the ability to add an image.
 
@@ -20,20 +22,8 @@ Writers can enter a word and have the wessite generate rhymes, synonyms, antonym
 
 4) The editor also features sample creations that showcase the possbilites of the editor. 
 
-# Wireframes 
 
-[Link to Page](https://wireframe.cc/acQKql)
+# Technology
 
-# Architecture and Technology
-
-Poetry Editor will be built with Javascript, HTML, and SCSS.
+Verserly is built with Javascript, HTML, and SCSS.
  
-# Implementation Timeline 
-
-Day 1: Poetry Erasure functionality with filters
-
-Day 2: Poetry Erasure functionality with filters/API implementation for suggest words
-
-Day 3: API implementation
-
-Day 4: CSS styling
