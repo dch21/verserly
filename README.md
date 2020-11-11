@@ -18,6 +18,19 @@ Writers can submit their original text or pieces that already have been written 
 
 Users can then change the font style and size. They can also edit or clear the text. If more space is needed, they can increase the canvas space by width and size. 
 
+Event listeners are added to DOM elements that are part of the editing toolbox. A change in the value of the toolbox changes the style of the text on the cavnas.
+```javascript
+const colorPicker = document.getElementById("colorPicker");
+colorPicker.addEventListener("change", () => {
+  document.getElementById("targetText").style.backgroundColor = colorPicker.value;
+});
+
+const fontSize = document.getElementById("fontSize");
+fontSize.addEventListener("change", () => {
+  document.getElementById("targetText").style.fontSize = fontSize.value + "px"
+});
+```
+
 ### Erasure/Blackout Poetry Mode
 
 ![erasure](/images/erasure_mode.gif)
