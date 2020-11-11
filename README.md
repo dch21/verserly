@@ -37,6 +37,52 @@ fontSize.addEventListener("change", () => {
 
 Writers can create [Erasure](https://poets.org/glossary/erasure) / [Blackout](https://trishhopkinson.com/2018/06/10/6-styles-of-erasure-poetry-guest-blog-post-by-erin-dorney/) Poetry using a variety of erasure filters. Users can click on a letter or word to make it disappear with a variety of settings such as blacked-out, whited-out, strike-through, and fade-out. 
 
+When text is submitted, each character is setup as a span element on the DOM and given the class of "visible." An onclick event listener is added to each span. When the span is clicked, a function is executed that changes the class of the span. Changing the class of an element corresponds to the changing how the element looks via SCSS. This gives the characters specific erasure effects. 
+```javascript
+window.submitText = () => {
+  const submittedText = document.getElementById("submitedText").value;
+
+  submittedText.split("").forEach((letter) => {
+
+    const span = document.createElement("span");
+    span.className = "visible";
+    span.setAttribute("contenteditable", false);
+    span.innerHTML = letter;
+    span.addEventListener("click", function() {
+      if (window.erasureSelection === "character" && window.eraseable) {
+        this.classList.toggle(`${window.erasureOption}`);
+      } else if (window.erasureSelection === "word" && window.eraseable) {
+        getWord(this).forEach((letterElement) => {
+          letterElement.classList.toggle(`${window.erasureOption}`);
+        });
+      }
+    });
+
+    const paragraph = document.getElementById("targetText");
+    paragraph.append(span);
+  });
+};
+```
+
+```css
+span.line-through {
+    text-decoration: line-through;
+}
+
+span.blackout {
+    background-color: black;
+}
+
+span.invisible {
+   opacity: 0
+}
+
+span.fade-out {
+   color: grey;
+   opacity: 0.3;
+}
+```
+
 ### Dictionary/ Thesaurus/ Word Generator
 
 ![dict](/images/dict.gif)
