@@ -110,15 +110,17 @@ window.getWord = function getWord(ele) {
   while (prev !== null && prev.innerHTML !== " " && prev.innerHTML != "?") {
     letters.push(prev);
     prev = prev.previousElementSibling;
-    if (prev === null || prev.innerHTML === " " || prev.innerHTML === "." ) {
+    if (prev === null || prev.innerHTML === " " || prev.innerHTML === "." || prev.innerHTML === "?" || prev.innerHTML === ";" || prev.innerHTML === "," ) {
       break;
     }
   }
   
-  while (next !==  null && next.innerHTML !== " " && prev.innerHTML != "?") {
+  while (next !==  null && next.innerHTML !== " " && next.innerHTML != "?" && next.innerHTML != ";" && next.innerHTML != ",") {
       letters.push(next)
       next = next.nextElementSibling;
-      if (next === null || next.innerHTML === " " || next.innerHTML === "." || prev.innerHTML === "?" ) {
+
+      if (next === null || next.innerHTML === " " || next.innerHTML === "." || next.innerHTML === "?" || next.innerHTML === ";" || next.innerHTML === "," ) {
+
         break;
       }
   }
