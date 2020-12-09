@@ -76,32 +76,6 @@ window.submitText = () => {
   });
 };
 
-// window.getWord = function getWord(ele) {
-  
-//   let prev = ele.previousElementSibling;
-//   let next = ele.nextElementSibling;
-//   let letters = [ele];
-//   while (prev !== null && prev.innerHTML !== " ") {
-//     letters.push(prev);
-//     prev = prev.previousElementSibling;
-//     if (prev === null || prev.innerHTML === " " || prev.innerHTML === ".") {
-//       break;
-//     }
-//   }
-  
-//   while (next !==  null && next.innerHTML !== " ") {
-//       letters.push(next)
-//       next = next.nextElementSibling;
-//       if (next === null || next.innerHTML === " " || next.innerHTML === ".") {
-//         break;
-//       }
-//   }
-//   return letters;
-  
-// }
-
-// && prev.innerHTML !== "," && prev.innerHTML !== ";"
-// || prev.innerHTML !== "?" || prev.innerHTML !== ";")
 window.getWord = function getWord(ele) {
   
   let prev = ele.previousElementSibling;
